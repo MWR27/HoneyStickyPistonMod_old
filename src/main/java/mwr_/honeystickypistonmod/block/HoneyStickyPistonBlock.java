@@ -312,7 +312,10 @@ public class HoneyStickyPistonBlock extends PistonBlock {
    
    @Override
    public PushReaction getPushReaction(BlockState state) {
-      return PushReaction.NORMAL;
+      if (state.get(EXTENDED)) {
+    	  return PushReaction.BLOCK;
+      }
+	   return PushReaction.NORMAL;
    }
    
    @Override
