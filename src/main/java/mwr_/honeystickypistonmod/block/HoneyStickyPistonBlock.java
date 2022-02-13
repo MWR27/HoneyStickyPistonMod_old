@@ -313,12 +313,13 @@ public class HoneyStickyPistonBlock extends PistonBlock {
    @Override
    public PushReaction getPushReaction(BlockState state) {
       if (state.get(EXTENDED)) {
-    	  return PushReaction.BLOCK;
+         return PushReaction.BLOCK;
+      } else {
+         return PushReaction.NORMAL;
       }
-	   return PushReaction.NORMAL;
    }
    
-   @Override
+   @Override //Code by samjviana
    public void onBlockHarvested(World worldIn, BlockPos pos, BlockState state, PlayerEntity player) {
        if (state.get(EXTENDED)) {
            Direction direction = state.get(FACING);
