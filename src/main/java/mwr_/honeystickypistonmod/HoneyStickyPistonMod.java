@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import mwr_.honeystickypistonmod.block.ModBlocks;
-import mwr_.honeystickypistonmod.item.ModItemGroup;
 import mwr_.honeystickypistonmod.tileentity.ModTileEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,7 +12,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
