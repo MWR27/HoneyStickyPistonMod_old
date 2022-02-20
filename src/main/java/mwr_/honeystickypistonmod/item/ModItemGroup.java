@@ -5,7 +5,7 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 public class ModItemGroup extends ItemGroup {
-	public static final ModItemGroup HONEY_STICKY_PISTON = new ModItemGroup(ItemGroup.GROUPS.length,
+	public static final ModItemGroup HONEY_STICKY_PISTON = new ModItemGroup(ItemGroup.TABS.length,
 			"my_first_mod");
 
 	public ModItemGroup(int index, String label) {
@@ -13,7 +13,7 @@ public class ModItemGroup extends ItemGroup {
 	}
 
 	@Override
-	public ItemStack createIcon() {
+	public ItemStack makeIcon() {
 		return new ItemStack(ModBlocks.HONEY_STICKY_PISTON.get());
 	}
 }

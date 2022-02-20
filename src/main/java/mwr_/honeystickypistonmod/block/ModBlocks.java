@@ -23,9 +23,9 @@ public class ModBlocks {
 
 	   private static HoneyStickyPistonBlock createHoneyStickyPiston(boolean sticky) {
 		      AbstractBlock.IPositionPredicate abstractblock$ipositionpredicate = (state, reader, pos) -> {
-		         return !state.get(PistonBlock.EXTENDED);
+		         return !state.getValue(PistonBlock.EXTENDED);
 		      };
-		      return new HoneyStickyPistonBlock(sticky, AbstractBlock.Properties.create(Material.PISTON).hardnessAndResistance(1.5F).harvestTool(ToolType.PICKAXE).setOpaque(ModBlocks::isntSolid).setSuffocates(abstractblock$ipositionpredicate).setBlocksVision(abstractblock$ipositionpredicate));
+		      return new HoneyStickyPistonBlock(sticky, AbstractBlock.Properties.of(Material.PISTON).strength(1.5F).harvestTool(ToolType.PICKAXE).isRedstoneConductor(ModBlocks::isntSolid).isSuffocating(abstractblock$ipositionpredicate).isViewBlocking(abstractblock$ipositionpredicate));
 		   }
 		
 		
@@ -35,6 +35,6 @@ public class ModBlocks {
 		
 		public static final RegistryObject<Block> HONEY_STICKY_PISTON_HEAD = BLOCKS
 				.register("honey_sticky_piston_head",
-						() -> new HoneyStickyPistonHeadBlock(AbstractBlock.Properties.create(Material.PISTON).hardnessAndResistance(1.5F).noDrops()));
+						() -> new HoneyStickyPistonHeadBlock(AbstractBlock.Properties.of(Material.PISTON).strength(1.5F).noDrops()));
 		
 }
